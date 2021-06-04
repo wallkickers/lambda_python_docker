@@ -1,0 +1,11 @@
+version: "3"
+services:
+  python3:
+    build: .
+    container_name: "python3_lambda"
+    working_dir: "/root/opt"
+    tty: true
+    volumes:
+      - ./opt:/root/opt
+    ports:
+      - "8000:80"
